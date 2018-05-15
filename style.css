@@ -1,0 +1,506 @@
+
+html{
+
+/* Set these values to 80% to give me more space in the 
+parent element to work with, possibly not required 
+but had the desired effect. */
+
+height:100%;
+width:100%
+
+/* Adding this was crucial. Without it everything 
+shifts to the left. Having no margin gives me 
+way more access to the outer edge of the page. */
+
+margin: 0;
+
+}
+
+body {
+
+/* I removed these values after adding them to html 
+and saw no change in the site. However I ended up keeping
+them in as it felt better ensuring all of my elements
+were within body - space wise I mean. */
+
+min-width: 80%;
+min-height: 95%;
+
+/* Much less dramatic than the html value, however it does 
+give me a little extra space so I've kept it for now. */
+
+margin: 0;
+
+font-family: arial,sans-serif;
+
+}
+
+
+
+/* ---- New section. ---- */
+
+
+/* Needed to move the whole ul away from the edges. Spec: 11*/
+.topbar ul {
+
+
+padding-left: 5px;
+padding-right: 15px;
+
+}
+
+
+
+/* !The Nav bar at the top. Spec: 12 */
+.topbar ul a{
+
+/* The following three rules are used to remove default list settings. */	
+
+	list-style-type: none;
+
+    margin: 0;
+
+    padding: 0;
+
+/* Some padding inbetween the text */    
+
+    padding-left: 15px;
+
+
+/* Removes all decoration, namely the underline. */
+
+    text-decoration: none;
+
+/* Style choice, fades our text a little. */
+
+    opacity: 0.75;
+
+/* Some font styling. */
+
+    font-family: arial,sans-serif;
+
+    font-size: 13px;
+
+    color: #000;
+
+/* Pushed my ul down a little to match the sign in button */    
+
+    line-height: 28px;
+
+/* Used to make the whole block element a link, rather than just the text. */
+/* If just block is used the li element has a br automatically, 
+   so inline is needed to remove this*/
+
+	display: inline-block;
+
+}
+
+
+/* Pretty self-explanatory. I've given the li I want to be
+on the right a class of "right" so I can move them there.
+Spec: 20; */
+.topbar .right {
+
+	float: right;
+
+}
+
+
+/* Refering to the word images. Needed space from sign in. 
+Spec: 10*/
+#images{
+
+padding-right: 10px;
+
+
+}
+
+
+/* Not so elegant but this moves the app button to the right
+spot. In future would be better to have it moved alongside
+it's parents with the other links but I've done the button
+by itself already. Spec: 10*/
+#appbutton {
+
+float: right;
+
+padding-right: 15px;
+
+color: grey;
+
+padding-top: 2px;
+
+}
+
+
+/* This was pulled from the material icons repo. Spec: 11*/
+.material-icons i {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 5px;
+  letter-spacing: normal;
+  text-transform: none;
+  padding-top: 10px;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* !Styling for the sign in button. Spec: 100 */
+#signin {
+
+/* Some font styling. */
+
+	color: #fff;
+
+	font-size: 13px;
+
+	font-family: arial,sans-serif;
+
+	font-weight: bold;
+
+/* Remove underline. */	
+
+	text-decoration: none;
+
+/* Removes the changing cursor, no longer a wee hand. */	
+
+	cursor: default;
+
+/* Button Creation */
+/* Adds a small shadow to the bottom of the button. */
+
+	box-shadow: 0 1px 0 rgba(0,0,0,.15);
+
+/* Makes box a little larger by increasing the border size, colors border. */	
+
+	border: 1px solid #4285f4;
+
+/* This provides the coloring of the box, including a gradient from the top. */	
+
+	background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+
+/* Provides the height of the button. */
+
+    line-height: 28px;
+
+/* Aligns text away from the right side. */    
+
+    padding: 0 12px;
+
+/* Rounds corners. */    
+
+    border-radius: 2px;
+
+/* Added as the opacity from other rule was changing the color. */
+
+	opacity: 1;
+
+/* Places the button on the far right of our nav bar */
+
+    float: right;
+
+/* Gives the ul some space, rather than being up against the right */
+
+margin-right: 10px;
+
+/* Not required??   white-space: nowrap; */
+/* display: inline-block; */
+}
+
+
+
+/* ---- New section. ---- */
+
+
+
+
+/* Parent of logo and searchbar. Defining what space it takes
+within body. Spec: 10*/
+.center {
+
+/* This gives us space on either side, thus placing the
+contents in the middle. Also wanted a bit more height to
+work with. */
+
+	width: 80%;
+	height: 500px;
+
+/* Without this there is a 20% margin on the right side. */
+	margin: 0 auto;
+
+
+/* Whilst having no current visable effect I have kept this
+in to help with the behaviour of the element. */
+	display: block;
+
+/* Just moving our logo & searchbar down a bit. */
+	padding-top: 50px;
+}
+
+
+
+/* !Google Logo. Spec: 11 */
+.logo img {
+
+/*  Padding to set it correctly on a vertical axis. */	
+	
+    padding-top: 90px;
+
+/*  This disply tag is telling my various elements how to behave. */	
+
+	display: block;
+
+/* Height & Width are defining the size of the logo img. */	
+
+    height: 92px;
+
+    width: 272px;
+
+/* These margin rules are to set it in the middle of the page, horizontally. */	
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+
+/* The container of the fancy style box. Allows me to move
+it without effecting the styling. */
+.searchbar_outer {
+
+padding-left: 475px;
+
+padding-top: 30px;
+
+}
+
+
+
+/* Parent of input box. Styling. */
+.searchbar {
+
+/* Increases height, looks much better. */    
+    height: 44px;
+
+/* This creates the display box & shadow. */
+
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    
+    border-radius: 2px;
+/* Setting the correct width of our box. */
+
+    max-width: 584px;
+    
+/* Slight shift in position. */
+
+    margin: -1px 0px 1px;
+
+}
+
+
+/* Used to move the input box around. */
+.searchbar_outer .searchbar .movinginput {
+
+	padding-top: 10px;
+
+	padding-left: 15px;
+
+	margin-top: -5px;
+
+
+}
+
+
+/* Actual input box. */
+.searchbar_outer .searchbar input {
+
+
+	border: none;
+
+	height: 25px;
+
+	line-height: 34px;
+
+	width: 85%;
+
+	font-family: arial, sans-serif;
+
+	font-size: 16px;
+
+	position: absolute auto;
+
+	margin-top: -25px;
+
+}
+
+/* Stops the input box from highlighting when selected. */
+	input:focus {outline:none;}
+
+
+/* Moving the button around the div. */
+.movemic .micbutton {
+
+	padding-top: 10px;
+
+	padding-right: 15px;
+
+}
+
+
+/* Setting the image values. */
+.movemic .micbutton img {
+
+	height: 25px;
+
+	float: right;
+
+}
+
+
+/* Positioning. */
+.mvtwoweebuttons {
+
+	padding-left: 625px;
+
+	padding-top: 20px;
+
+}
+
+
+/* The styling of the buttons and text. */
+.mvtwoweebuttons .twoweebuttons input{
+
+
+/* Button sizing. */
+	height: 36px;
+	min-width: 54px;
+
+/* Button styling & position */
+
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    margin: 11px 4px;
+    padding: 0 16px;
+
+/* Stops the cursor from becoming a hand. */
+    cursor: default;
+    
+/* Text styling. */
+    
+	color: #757575;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+
+
+
+/* ---- New section. ---- */
+
+
+
+
+/* Footer container. */
+
+
+.footer {
+
+
+/* Keeps my footer in one spot, not an issue as this page
+doesn't scroll. */
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+
+/* Some styling. */    
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    height: 40px;
+
+
+}
+
+
+/* This time I've split the left and right containers. */
+.footer .footerleft{
+
+	position: absolute;
+
+	top: -10%;
+
+	left: 2%;
+
+	margin-left: -75px;
+
+}
+
+
+/* Styling & positioning. */
+.footer .footerleft a{
+
+	float: left;
+
+	padding-left: 25px;
+
+	font-size: small;
+
+	cursor: default;
+
+
+/* Removes all decoration, namely the underline. */
+
+    text-decoration: none;
+
+	color: #666;
+
+
+}
+/* This time I've split the left and right containers. */
+.footer .footerright{
+
+	position: absolute;
+
+	top: -10%;
+
+	right: 2%;
+
+	margin-right: -30px;
+
+
+
+
+}
+
+
+/* Styling & positioning. */
+.footer .footerright a{
+
+
+	float: right;
+
+	padding-right: 25px;
+
+	font-size: small;
+
+	cursor: default;
+
+
+/* Removes all decoration, namely the underline. */
+
+    text-decoration: none;
+
+	color: #666;
+
+
+}
